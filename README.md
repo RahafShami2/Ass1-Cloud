@@ -9,10 +9,12 @@
 
 -     Install apache2 to the vm
 :~$ sudo apt update
+
 :~$ sudo apt install apache2
 
 -     Create directory "about" and folder "home" for new website in /var/www/html
 :~$ sudo mkdir /var/www/html/about
+
 :~$ sudo mkdir /var/www/html/home
 
 -     Install package vim to run vims commands
