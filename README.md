@@ -42,15 +42,25 @@
 -     Create web pages inside subdomain file "contact" , then I wrote the html code for the contact page then pressed to ctrl+c twice and wrote " :wq "
 :~$ sudo vim ~/contact/index.html
 
+
 -     For the "contact" subdomain, make sure grant apache2 the required permission (chmod: to modify the file permissions).
 :~$ sudo chmod -R 755 ~/contact
 
 -     To make sure the apache user, which is “www-data”, has the required permission to the contact folder
 :~$ sudo chown -R www-data ~/contact
 
--     Make subdomains then modified the ServerName and DocumentRoot then pressed to ctrl+c twice and wrote " :wq "  
-:~$ cd /etc/apache2/sites-available
+-    Going into the configuration files directory
+:~$ cd /etc/apache2/sites-available/
 
+-    Since Apache came with a default VirtualHost file, let’s use that as a base, to match subdomain name 
+:/etc/apache2/sites-available$ sudo cp 000-default.conf www.about.rahafshami.com 
+
+:/etc/apache2/sites-available$ sudo cp 000-default.conf www.home.rahafshami.com
+
+:/etc/apache2/sites-available$ sudo cp 000-default.conf www.contact.rahafshami.com
+
+
+-     Make subdomains then modified the ServerName and DocumentRoot then pressed to ctrl+c twice and wrote " :wq "  
 :/etc/apache2/sites-available$ sudo vim 000-default.conf 
 
 :/etc/apache2/sites-available$ sudo vim www.about.rahafshami.com.conf 
@@ -66,6 +76,16 @@
 ![330132855_3440294186296645_1807383859319545175_n](https://user-images.githubusercontent.com/75248980/221284630-48e6e8dd-9ec3-4c44-b9e7-1eeedb8b9a0f.jpg)
 
 
+ -     Activate the virtual hosts configuration file to enable it.
+:/etc/apache2/sites-available$ sudo a2ensite www.about.rahafshami.com www.contact.rahafshami.com www.home.rahafshami.com
+
+
+ -    To load the new site, we restart Apache 
+:/etc/apache2/sites-available$ systemctl reload apache2
+
+OR :/etc/apache2/sites-available$ systemcrl restart apache2
+ 
+
 -     Rename hostname of my web server then pressed to ctrl+c twice and wrote " :wq "
 :/etc/apache2/sites-available$ sudo vim /etc/hostname
 
@@ -76,7 +96,6 @@
 :/etc/apache2/sites-available$ sudo vim /etc/hosts
 
 ![49a0c078-1fc0-4e62-ac93-65dc24832bbc](https://user-images.githubusercontent.com/75248980/221286846-35d269e9-51c2-4aa6-bd31-78940b972dee.jpg)
-
 
 
 
