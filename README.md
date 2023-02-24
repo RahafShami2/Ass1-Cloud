@@ -7,4 +7,48 @@
 -     Reachability of a host on an internet
 :~$ ping google.com  
 
-![image](https://user-images.githubusercontent.com/75248980/221270064-1daee44d-3ccc-44de-bedc-3de5df26c30b.png)
+-     Install apache2 to the vm
+:~$ sudo apt update
+:~$ sudo apt install apache2
+
+-     Create directory "about" and folder "home" for new website in /var/www/html
+:~$ sudo mkdir /var/www/html/about
+:~$ sudo mkdir /var/www/html/home
+
+-     Install package vim to run vims commands
+:~$ sudo apt install vim -y 
+
+-     Create web pages inside folder "about" , folder "home" and another one for default page , then I wrote the html code for each page.
+:~$ sudo vim /var/www/html/about/index.html
+:~$ sudo vim /var/www/html/home/index.html
+:~$ sudo vim /var/www/html/index.html
+
+-     Create subdomain file "contact" that be located under “~/contact” directory
+:~$ sudo mkdir ~/contact
+
+-     Create web pages inside subdomain file "contact" , then I wrote the html code for the contact page.
+:~$ sudo vim ~/contact/index.html
+
+-     For the "contact" subdomain, make sure grant apache2 the required permission (chmod: to modify the file permissions).
+:~$ sudo chmod -R 755 ~/contact
+
+-     For the "contact" subdomain, make sure grant apache2 the required permission (chmod: to modify the file permissions).
+:~$ sudo chmod -R 755 ~/contact
+
+-     To make sure the apache user, which is “www-data”, has the required permission to the contact folder
+:~$ sudo chown -R www-data ~/contact
+
+-     Make subdomains then modified the ServerName ,ServerAdmin and DocumentRoot then pressed to ctrl+c twice and wrote " :wq "  
+:~$ cd /etc/apache2/sites-available
+:/etc/apache2/sites-available$ sudo vim 000-default.conf 
+:/etc/apache2/sites-available$ sudo vim www.about.rahafshami.com.conf 
+:/etc/apache2/sites-available$ sudo vim www.contact.rahafshami.com.conf 
+:/etc/apache2/sites-available$ sudo vim www.home.rahafshami.com.conf 
+
+![image](https://user-images.githubusercontent.com/75248980/221280454-687cc47e-8d86-45ad-b771-94c9a5d6b2f9.png)
+
+
+
+
+
+
