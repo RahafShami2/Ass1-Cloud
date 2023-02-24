@@ -22,7 +22,9 @@
 
 -     Create web pages inside folder "about" , folder "home" and another one for default page , then I wrote the html code for each page.
 :~$ sudo vim /var/www/html/about/index.html
+
 :~$ sudo vim /var/www/html/home/index.html
+
 :~$ sudo vim /var/www/html/index.html
 
 -     Create subdomain file "contact" that be located under “~/contact” directory
@@ -42,9 +44,13 @@
 
 -     Make subdomains then modified the ServerName and DocumentRoot then pressed to ctrl+c twice and wrote " :wq "  
 :~$ cd /etc/apache2/sites-available
+
 :/etc/apache2/sites-available$ sudo vim 000-default.conf 
+
 :/etc/apache2/sites-available$ sudo vim www.about.rahafshami.com.conf 
+
 :/etc/apache2/sites-available$ sudo vim www.home.rahafshami.com.conf 
+
 ![330132855_3440294186296645_1807383859319545175_n](https://user-images.githubusercontent.com/75248980/221284561-ec15d154-05ce-429c-bb37-faf4398bab6f.jpg)
 
 -     Make subdomains then modified the ServerName , DocumentRoot and  Directory then pressed to ctrl+c twice and wrote " :wq "  
