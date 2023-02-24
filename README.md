@@ -38,15 +38,22 @@
 -     To make sure the apache user, which is “www-data”, has the required permission to the contact folder
 :~$ sudo chown -R www-data ~/contact
 
--     Make subdomains then modified the ServerName ,ServerAdmin and DocumentRoot then pressed to ctrl+c twice and wrote " :wq "  
+-     Make subdomains then modified the ServerName and DocumentRoot then pressed to ctrl+c twice and wrote " :wq "  
 :~$ cd /etc/apache2/sites-available
 :/etc/apache2/sites-available$ sudo vim 000-default.conf 
 :/etc/apache2/sites-available$ sudo vim www.about.rahafshami.com.conf 
-:/etc/apache2/sites-available$ sudo vim www.contact.rahafshami.com.conf 
 :/etc/apache2/sites-available$ sudo vim www.home.rahafshami.com.conf 
+![330132855_3440294186296645_1807383859319545175_n](https://user-images.githubusercontent.com/75248980/221284561-ec15d154-05ce-429c-bb37-faf4398bab6f.jpg)
 
-![image](https://user-images.githubusercontent.com/75248980/221280454-687cc47e-8d86-45ad-b771-94c9a5d6b2f9.png)
+-     Make subdomains then modified the ServerName , DocumentRoot and  Directory then pressed to ctrl+c twice and wrote " :wq "  
+:/etc/apache2/sites-available$ sudo vim www.contact.rahafshami.com.conf 
+![330132855_3440294186296645_1807383859319545175_n](https://user-images.githubusercontent.com/75248980/221284630-48e6e8dd-9ec3-4c44-b9e7-1eeedb8b9a0f.jpg)
 
+-     Rename hostname of my web server 
+:/etc/apache2/sites-available$ sudo vim /etc/hostname
+
+-     Wrote IP with hostname
+:/etc/apache2/sites-available$ sudo vim /etc/hosts
 
 
 
