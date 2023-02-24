@@ -3,29 +3,31 @@
 
 
 -     Configure a network interface (Check the current IP for my web server) 
-:~$ ifconfig 
+:~$ ``ifconfig`` 
 
 ![0e4d2037-3b27-400e-ab2b-c7557a8e4620](https://user-images.githubusercontent.com/75248980/221287602-e67553ed-69e0-4d16-a2c2-7dd254b17419.jpg)
 
 
 -     Reachability of a host on an internet
-:~$ ping google.com  
+:~$ ``ping google.com``  
 
 ![2a1a87ab-8673-4636-a323-885c58a85306](https://user-images.githubusercontent.com/75248980/221287886-93a92b2b-d836-47ab-a959-308d404745a1.jpg)
 
 
 -     Install apache2 to the vm
-:~$ sudo apt update
+:~$ ``sudo apt update
 
-:~$ sudo apt install apache2
+:~$ sudo apt install apache2``
+
 
 -     Create directory "about" and folder "home" for new website in /var/www/html
-:~$ sudo mkdir /var/www/html/about
+:~$ ``sudo mkdir /var/www/html/about
 
-:~$ sudo mkdir /var/www/html/home
+:~$ sudo mkdir /var/www/html/home``
+
 
 -     Install package vim to run vims commands
-:~$ sudo apt install vim -y 
+:~$ ``sudo apt install vim -y`` 
 
 -     Create web pages inside folder "about" , folder "home" and another one for default page , then I wrote the html code for each page then pressed to ctrl+c twice and wrote " :wq ". 
 :~$ sudo vim /var/www/html/about/index.html
