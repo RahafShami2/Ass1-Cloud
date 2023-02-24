@@ -1,6 +1,7 @@
 -     Install package net-tools to run ifconfig command
 :~$ sudo apt-get install net-tools -y
 
+
 -     Configure a network interface (Check the current IP for my web server) 
 :~$ ifconfig 
 
