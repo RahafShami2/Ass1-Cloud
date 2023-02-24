@@ -68,11 +68,13 @@
 
 -     Rename hostname of my web server then pressed to ctrl+c twice and wrote " :wq "
 :/etc/apache2/sites-available$ sudo vim /etc/hostname
+
 ![f398bc92-a49a-4074-8e23-03999be6983c](https://user-images.githubusercontent.com/75248980/221286892-2b65d8df-6738-4882-9222-f107e8c524a9.jpg)
 
 
 -     Wrote IP with hostname then pressed to ctrl+c twice and wrote " :wq "
 :/etc/apache2/sites-available$ sudo vim /etc/hosts
+
 ![49a0c078-1fc0-4e62-ac93-65dc24832bbc](https://user-images.githubusercontent.com/75248980/221286846-35d269e9-51c2-4aa6-bd31-78940b972dee.jpg)
 
 
