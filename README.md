@@ -47,6 +47,7 @@
 
 -     Make subdomains then modified the ServerName , DocumentRoot and  Directory then pressed to ctrl+c twice and wrote " :wq "  
 :/etc/apache2/sites-available$ sudo vim www.contact.rahafshami.com.conf 
+
 ![330132855_3440294186296645_1807383859319545175_n](https://user-images.githubusercontent.com/75248980/221284630-48e6e8dd-9ec3-4c44-b9e7-1eeedb8b9a0f.jpg)
 
 -     Rename hostname of my web server 
